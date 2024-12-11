@@ -1,0 +1,53 @@
+/* Styles pour la fenêtre modale */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    z-index: 2000;
+    pointer-events: auto; /* Autoriser les clics sur le modal */
+  }
+  
+  /* Contenu du modal */
+  .modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease; /* Animation d'apparition */
+    pointer-events: auto; /* Autoriser les clics uniquement sur le contenu du modal */
+  }
+  
+  /* Bouton de fermeture */
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+  }
+  
+  /* Animation fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
